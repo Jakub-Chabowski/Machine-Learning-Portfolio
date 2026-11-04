@@ -1,1 +1,5 @@
+Download data from https://archive.ics.uci.edu/dataset/162/forest+fires
+
+Place unzipped data into the data/ directory so that the path is as follows:
+data/forest+fires/forestfires.csv
 
