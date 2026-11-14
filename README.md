@@ -37,10 +37,33 @@ data/forest+fires/forestfires.csv
 # Run
     jupyter lab
 Open the notebooks directory and open the notebook you want to run
-### Current Notebooks
-#### Analysis.ipynb
-Contains the data audit as well as results of normalising the target using different methods
-#### Preprocessing & Baseline.ipynb
-Includes the initial preprocessing decisions as well as a variety of tests around deciding a baseline model
+## Current Notebooks
+
+### _MAIN
+#### These notebooks contain the main summaries of findings and allow for the evidence that these findings are based on the be collated
+#### /Hyperparameters_and_data.ipynb
+Contains code to read in data and stores any global hyperparameters (currently only RANDOM_STATE)
+#### /Run_all_analysis.ipynb
+Includes findings and runs all of the relevant analysis notebooks
+#### /Run_all_models_and_findings.ipynb
+Includes findings and runs all of the models
+
+### Analysis
+#### /Analysis.ipynb
+Contains the data audit as well as results of normalising the target using different methods. As well as this prints out the effects that the different pre-processing pipelines having on the dataset
+#### /Feature_Importance.ipynb
+Uses a RandomForestRegressor to extract feature importances using MDI and prints assoicated graphs
+
+### Models
+#### /Train_Test_Split.ipynb
+Runs the models and preprocessing pipelines using a train_test_split and outputs graphs for Residual Analysis, MAE, RMSE, and R2 Score
+#### /Neural_Networks.ipynb
+Runs a limited number of MLPRegression models and compares them to the Baseline Model and outputs graphs for Residual Analysis, MAE, RMSE, and R2 Score
+#### /Cross_Validate.ipynb
+Runs the models and preprocessing pipelines using RepeatedKFold cross_validation and outputs graphs for MAE, RMSE and R2 Score
+
+### Preprocessing
+#### /Preprocessing.ipynb
+Includes the defintions for all of the pre-processing pipelines as well as the models that are used. These are accessed by the other notebooks.
 
 To run the notebook: click Run in the header, then select Restart Kernel and Run All
